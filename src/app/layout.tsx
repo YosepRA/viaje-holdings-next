@@ -1,7 +1,7 @@
 import { Inter, Catamaran } from 'next/font/google';
 
-import 'bootstrap/dist/css/bootstrap.min.css';
 import 'styles/globals.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const inter = Inter({ subsets: ['latin'] });
 const catamaran = Catamaran({ subsets: ['latin'] });

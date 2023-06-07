@@ -32,6 +32,8 @@
       margin-bottom: 16px;
       font-size: 20px;
       font-weight: 700;
+      text-decoration: none;
+      color: $white-color;
     }
   }
 
@@ -60,6 +62,8 @@
     &Item {
       display: inline-block;
       font-size: 30px;
+      text-decoration: none;
+      color: $white-color;
 
       &:not(:last-child) {
         margin-right: 12px;
