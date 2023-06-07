@@ -1,3 +1,11 @@
+.dropdown-toggle.nav-link {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 4px;
+  justify-content: center;
+  align-items: center;
+}
+
 @media (min-width: 992px) {
   .navbar-expand-lg .navbar-nav .nav-link {
     padding-left: 24px;
@@ -5,7 +13,7 @@
   }
 
   .navbar-expand-lg .navbar-nav .dropdown-menu {
-    left: -100px;
+    left: -60px;
   }
 }
 

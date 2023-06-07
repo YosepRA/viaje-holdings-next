@@ -2,6 +2,8 @@
 
 import React from 'react';
 import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faTelegram,
@@ -17,67 +19,74 @@ const Banner = function BannerComponent() {
   return (
     <section className={styles.banner}>
       <Container className={styles.bannerContainer}>
-        <div className={styles.bannerInfo}>
-          <h1>
-            <span className={styles.bannerTitleTop}>CARBON FREE</span>
-            <span className={styles.bannerTitleBottom}>VIAJE</span>
-          </h1>
+        <Row className={styles.bannerRow}>
+          <Col xs={12} md={8} xl={7}>
+            <div className={styles.bannerInfo}>
+              <h1>
+                <span className={styles.bannerTitleTop}>CARBON FREE</span>
+                <span className={styles.bannerTitleBottom}>VIAJE</span>
+              </h1>
 
-          <p>
-            An Eco-Friendly company that provides travel and cultural contents,
-            and develop an online and offline streaming service converged with
-            the 4<sup>th</sup> industry and metaverse service.
-          </p>
+              <p className={styles.bannerExcerpt}>
+                An Eco-Friendly company that provides travel and cultural
+                contents, and develop an online and offline streaming service
+                converged with the 4<sup>th</sup> industry and metaverse
+                service.
+              </p>
 
-          <div className={styles.bannerSocialMedia}>
-            <a
-              href="#"
-              target="_blank"
-              rel="noreferrer"
-              className={styles.bannerSocialMediaItem}
-            >
-              <FontAwesomeIcon icon={faTelegram} />
-            </a>
+              <div className={styles.bannerSocialMedia}>
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noreferrer"
+                  className={styles.bannerSocialMediaItem}
+                >
+                  <FontAwesomeIcon icon={faTelegram} />
+                </a>
 
-            <a
-              href="#"
-              target="_blank"
-              rel="noreferrer"
-              className={styles.bannerSocialMediaItem}
-            >
-              <FontAwesomeIcon icon={faInstagram} />
-            </a>
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noreferrer"
+                  className={styles.bannerSocialMediaItem}
+                >
+                  <FontAwesomeIcon icon={faInstagram} />
+                </a>
 
-            <a
-              href="#"
-              target="_blank"
-              rel="noreferrer"
-              className={styles.bannerSocialMediaItem}
-            >
-              <FontAwesomeIcon icon={faMedium} />
-            </a>
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noreferrer"
+                  className={styles.bannerSocialMediaItem}
+                >
+                  <FontAwesomeIcon icon={faMedium} />
+                </a>
 
-            <a
-              href="#"
-              target="_blank"
-              rel="noreferrer"
-              className={styles.bannerSocialMediaItem}
-            >
-              <FontAwesomeIcon icon={faTwitter} />
-            </a>
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noreferrer"
+                  className={styles.bannerSocialMediaItem}
+                >
+                  <FontAwesomeIcon icon={faTwitter} />
+                </a>
 
-            <a
-              href="#"
-              target="_blank"
-              rel="noreferrer"
-              className={styles.bannerSocialMediaItem}
-            >
-              <FontAwesomeIcon icon={faYoutube} />
-            </a>
-          </div>
-        </div>
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noreferrer"
+                  className={styles.bannerSocialMediaItem}
+                >
+                  <FontAwesomeIcon icon={faYoutube} />
+                </a>
+              </div>
+            </div>
+          </Col>
 
-        <div className={styles.bannerDemoImage}></div>
+          <Col xs={12} md={4} xl={5}>
+            <div className={styles.bannerDemoImage}></div>
+          </Col>
+        </Row>
       </Container>
     </section>
   );

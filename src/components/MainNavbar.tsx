@@ -51,12 +51,18 @@ const LangDropdownTitle = function LangDropdownTitleComponent({
   }
 
   return (
-    <>
+    <div className={styles.navbarDropdownTitle}>
       <span>
-        <Image src={`/img/${flag}`} alt={altText} width={25} height={25} />
+        <Image
+          src={`/img/${flag}`}
+          alt={altText}
+          width={25}
+          height={25}
+          className={styles.navbarDropdownImage}
+        />
       </span>
       {text}
-    </>
+    </div>
   );
 };
 

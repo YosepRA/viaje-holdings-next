@@ -25,7 +25,7 @@ const Footer = function FooterComponent() {
     <footer className={styles.footer}>
       <Container>
         <Row className={styles.footerRowTop}>
-          <Col xs={12}>
+          <Col xs={12} lg={5}>
             <div className={styles.footerInfo}>
               <h2 className={styles.footerInfoTitle}>Viaje Holdings</h2>
 
@@ -39,7 +39,7 @@ const Footer = function FooterComponent() {
             </div>
           </Col>
 
-          <Col xs={12}>
+          <Col xs={12} lg={3}>
             <div className={styles.footerNav}>
               <Link href="/about" className={styles.footerNavLink}>
                 About
@@ -50,7 +50,7 @@ const Footer = function FooterComponent() {
             </div>
           </Col>
 
-          <Col xs={12}>
+          <Col xs={12} lg={4}>
             <div>
               <div className={styles.footerContact}>
                 <h3 className={styles.footerContactTitle}>Let us know</h3>
@@ -86,14 +86,16 @@ const Footer = function FooterComponent() {
         </Row>
 
         <Row className={styles.footerRowBottom}>
-          <Col xs={12}>
+          <Col xs={12} lg={6}>
             <div>
-              <p>Copyright &copy; 2023 Viaje Holdings. All Right Reserved </p>
+              <p className={styles.footerCopyright}>
+                Copyright &copy; 2023 Viaje Holdings. All Right Reserved{' '}
+              </p>
             </div>
           </Col>
 
-          <Col xs={12}>
-            <div>
+          <Col xs={12} lg={6}>
+            <div className={styles.footerSocialMedia}>
               <a
                 href="#"
                 target="_blank"

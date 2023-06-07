@@ -16,7 +16,7 @@ const Partners = function PartnersComponent() {
           <Col>
             <h2 className={styles.partnersTitle}>Partners</h2>
 
-            <p>
+            <p className={styles.partnersBody}>
               Carbon-Free VIAJE collaborated with various local companies in
               Bali and as well as Korean companies to expand the business
               globally and provide the best service to the people in the
@@ -25,20 +25,38 @@ const Partners = function PartnersComponent() {
           </Col>
         </Row>
 
-        <Row className="gx-3 gy-2">
-          <Col xs={6}>
+        <Row className="gx-3 gy-2 gy-xl-3">
+          <Col xs={6} md={4} lg={3} xl={2}>
             <div className={styles.partnersItem}></div>
           </Col>
-          <Col xs={6}>
+          <Col xs={6} md={4} lg={3} xl={2}>
             <div className={styles.partnersItem}></div>
           </Col>
-          <Col xs={6}>
+          <Col xs={6} md={4} lg={3} xl={2}>
             <div className={styles.partnersItem}></div>
           </Col>
-          <Col xs={6}>
+          <Col xs={6} md={4} lg={3} xl={2}>
             <div className={styles.partnersItem}></div>
           </Col>
-          <Col xs={6}>
+          <Col xs={6} md={4} lg={3} xl={2}>
+            <div className={styles.partnersItem}></div>
+          </Col>
+          <Col xs={6} md={4} lg={3} xl={2}>
+            <div className={styles.partnersItem}></div>
+          </Col>
+          <Col xs={6} md={4} lg={3} xl={2}>
+            <div className={styles.partnersItem}></div>
+          </Col>
+          <Col xs={6} md={4} lg={3} xl={2}>
+            <div className={styles.partnersItem}></div>
+          </Col>
+          <Col xs={6} md={4} lg={3} xl={2}>
+            <div className={styles.partnersItem}></div>
+          </Col>
+          <Col xs={6} md={4} lg={3} xl={2}>
+            <div className={styles.partnersItem}></div>
+          </Col>
+          <Col xs={6} md={4} lg={3} xl={2}>
             <div className={styles.partnersItem}></div>
           </Col>
         </Row>

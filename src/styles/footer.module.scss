@@ -2,7 +2,7 @@
 
 .footer {
   padding: 24px 0;
-  background-color: $body-color;
+  background-color: #000;
   color: $white-color;
 
   &Row {
@@ -63,6 +63,58 @@
 
       &:not(:last-child) {
         margin-right: 12px;
+      }
+    }
+  }
+}
+
+/* =============== Breakpoints =============== */
+
+@include media-breakpoint-up(up) {
+  .footer {
+    padding: 48px 0;
+
+    &Row {
+      &Bottom {
+        align-items: center;
+        padding-bottom: 0;
+      }
+    }
+
+    &Contact {
+      &Title {
+        font-size: 20px;
+      }
+    }
+
+    &Download {
+      &Title {
+        font-size: 20px;
+      }
+
+      &Button {
+        display: inline-block;
+        width: 130px;
+        margin-right: 8px;
+        margin-bottom: 0;
+      }
+    }
+
+    &Copyright {
+      margin-bottom: 0;
+    }
+
+    &SocialMedia {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      &Item {
+        font-size: 24px;
+
+        &:not(:last-child) {
+          margin-right: 22px;
+        }
       }
     }
   }

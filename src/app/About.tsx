@@ -12,12 +12,12 @@ const About = function AboutComponent() {
   return (
     <section className={styles.about}>
       <Container>
-        <Row>
-          <Col xs={12}>
+        <Row className={styles.aboutRow}>
+          <Col xs={12} md={8}>
             <div className={styles.aboutInfo}>
               <h2 className={styles.aboutTitle}>About Us</h2>
 
-              <p>
+              <p className={styles.aboutBody}>
                 Carbon-Free VIAJE is an Eco-Friendly ESG investment and
                 management company that provides travel and cultural contents
                 and handling a metaverse service fused with the 4<sup>th</sup>{' '}
@@ -31,7 +31,7 @@ const About = function AboutComponent() {
             </div>
           </Col>
 
-          <Col xs={12}>
+          <Col xs={12} md={4}>
             <div className={styles.aboutDemoImage}></div>
           </Col>
         </Row>

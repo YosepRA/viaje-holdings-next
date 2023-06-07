@@ -1,10 +1,13 @@
 @import 'config';
 
+$section-padding: 24px 0;
+$section-padding-md: 48px 0;
+$section-padding-xl: 100px 0;
+
 .banner {
   background-color: $white-color;
-  margin-bottom: 32px;
-  padding-top: 16px;
-  padding-bottom: 16px;
+  margin-bottom: 0;
+  padding: $section-padding;
 
   &Container {
     @include flex-center();
@@ -47,7 +50,8 @@
 }
 
 .services {
-  margin-bottom: 32px;
+  margin-bottom: 0;
+  padding: $section-padding;
 
   &Info {
     margin-bottom: 16px;
@@ -70,13 +74,24 @@
       padding: 6px 12px;
       border-radius: 24px;
       transition: background-color 200ms ease-out;
+      border: 1px solid $body-color;
 
       &:hover {
         background-color: #eee;
       }
 
+      &:active {
+        background-color: #dddeee;
+      }
+
       &Active {
-        background-color: #eee;
+        background-color: $body-color;
+        color: $white-color;
+
+        &:hover {
+          background-color: $body-color;
+          color: $white-color;
+        }
       }
     }
   }
@@ -93,7 +108,8 @@
 }
 
 .about {
-  margin-bottom: 32px;
+  margin-bottom: 0;
+  padding: $section-padding;
 
   &Info {
     margin-bottom: 16px;
@@ -117,9 +133,11 @@
 }
 
 .partners {
-  padding-bottom: 64px;
+  margin-bottom: 0;
+  padding: $section-padding;
 
   &Title {
+    margin-bottom: 16px;
     font-weight: 700;
     text-transform: uppercase;
   }
@@ -134,6 +152,66 @@
 
 /* =============== Breakpoints =============== */
 
+@include media-breakpoint-up(md) {
+  .banner {
+    margin-bottom: 0;
+    padding: $section-padding-md;
+
+    &Row {
+      align-items: center;
+    }
+
+    &DemoImage {
+      display: block;
+      margin: auto;
+    }
+  }
+
+  .services {
+    margin-bottom: 0;
+    padding: $section-padding-md;
+
+    &Row {
+      align-items: center;
+    }
+
+    &Title {
+      margin-bottom: 0;
+    }
+
+    &Info {
+      margin-bottom: 0;
+
+      &Row {
+        align-items: center;
+      }
+    }
+
+    &DemoImage {
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  .about {
+    margin-bottom: 0;
+    padding: $section-padding-md;
+
+    &Row {
+      align-items: center;
+    }
+  }
+
+  .partners {
+    margin-bottom: 0;
+    padding: $section-padding-md;
+
+    &Title {
+      text-align: center;
+    }
+  }
+}
+
 @include media-breakpoint-up(lg) {
   .banner {
     &Title {
@@ -147,6 +225,90 @@
         font-size: 120px;
         font-weight: 700;
       }
+    }
+  }
+
+  .services {
+    &Control {
+      grid-template-columns: repeat(3, 25%);
+    }
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .banner {
+    padding: $section-padding-xl;
+
+    &Excerpt {
+      margin-bottom: 76px;
+      font-size: 20px;
+    }
+
+    &DemoImage {
+      width: 380px;
+      height: 380px;
+    }
+  }
+
+  .services {
+    padding: $section-padding-xl;
+
+    &Row {
+      position: relative;
+    }
+
+    &Title {
+      position: absolute;
+      top: 82px;
+      font-size: 48px;
+    }
+
+    &Control {
+      margin-bottom: 48px;
+    }
+
+    &Info {
+      &Body {
+        margin-bottom: 48px;
+        font-size: 20px;
+      }
+    }
+
+    &DemoImage {
+      width: 200px;
+      height: 200px;
+    }
+  }
+
+  .about {
+    padding: $section-padding-xl;
+
+    &Title {
+      font-size: 48px;
+    }
+
+    &Body {
+      margin-bottom: 48px;
+      font-size: 20px;
+    }
+
+    &DemoImage {
+      width: 300px;
+      height: 300px;
+    }
+  }
+
+  .partners {
+    padding: $section-padding-xl;
+
+    &Body {
+      margin-bottom: 48px;
+      font-size: 20px;
+      text-align: center;
+    }
+
+    &Item {
+      height: 64px;
     }
   }
 }
