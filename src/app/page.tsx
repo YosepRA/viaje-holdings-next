@@ -1,17 +1,28 @@
-'use client';
-
 import Image from 'next/image';
-import Container from 'react-bootstrap/Container';
 
-import Navbar from 'components/Navbar';
+import MainNavbar from 'components/MainNavbar';
+import Banner from './Banner';
+import Services from './Services';
+import About from './About';
+import Partners from './Partners';
+import Footer from 'components/Footer';
 
 export default function Home() {
   return (
     <div>
-      <Container>
-        <h1>Body</h1>
-      </Container>
-      <Navbar />
+      <MainNavbar />
+
+      <main>
+        <Banner />
+
+        <Services />
+
+        <About />
+
+        <Partners />
+      </main>
+
+      <Footer />
     </div>
   );
 }

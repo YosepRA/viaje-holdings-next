@@ -1,0 +1,152 @@
+@import 'config';
+
+.banner {
+  background-color: $white-color;
+  margin-bottom: 32px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  &Container {
+    @include flex-center();
+    flex-direction: column;
+  }
+
+  &Title {
+    &Top {
+      display: block;
+      font-size: 28px;
+      line-height: 1;
+    }
+
+    &Bottom {
+      display: block;
+      font-size: 100px;
+      font-weight: 700;
+      line-height: 1;
+    }
+  }
+
+  &SocialMedia {
+    display: flex;
+    align-items: center;
+
+    &Item {
+      font-size: 30px;
+      color: $grey-color;
+
+      &:not(:last-child) {
+        margin-right: 12px;
+      }
+    }
+  }
+
+  &DemoImage {
+    @include demo-image();
+    display: none;
+  }
+}
+
+.services {
+  margin-bottom: 32px;
+
+  &Info {
+    margin-bottom: 16px;
+  }
+
+  &Title {
+    margin-bottom: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  &Control {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 16px;
+
+    &Button {
+      background: #fff;
+      padding: 6px 12px;
+      border-radius: 24px;
+      transition: background-color 200ms ease-out;
+
+      &:hover {
+        background-color: #eee;
+      }
+
+      &Active {
+        background-color: #eee;
+      }
+    }
+  }
+
+  &LearnMore {
+    display: inline-block;
+    @include primary-button();
+  }
+
+  &DemoImage {
+    @include demo-image();
+    margin: 0 auto;
+  }
+}
+
+.about {
+  margin-bottom: 32px;
+
+  &Info {
+    margin-bottom: 16px;
+  }
+
+  &Title {
+    margin-bottom: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  &LearnMore {
+    display: inline-block;
+    @include primary-button();
+  }
+
+  &DemoImage {
+    @include demo-image();
+    margin: 0 auto;
+  }
+}
+
+.partners {
+  padding-bottom: 64px;
+
+  &Title {
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  &Item {
+    width: 100%;
+    height: 50px;
+    border-radius: 12px;
+    background-color: $grey-color;
+  }
+}
+
+/* =============== Breakpoints =============== */
+
+@include media-breakpoint-up(lg) {
+  .banner {
+    &Title {
+      &Top {
+        line-height: 1;
+        font-size: 32px;
+      }
+
+      &Bottom {
+        line-height: 1;
+        font-size: 120px;
+        font-weight: 700;
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+@import 'config';
+
+.navbar {
+  background-color: #fff;
+  font-weight: 500;
+
+  &Brand {
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  &Collapse {
+    justify-content: flex-end;
+  }
+
+  &Link {
+    text-align: center;
+    color: $body-color;
+
+    &:hover {
+      background: #eee;
+    }
+
+    &Active {
+      font-weight: 400;
+    }
+  }
+
+  &Dropdown {
+    text-align: center;
+    font-weight: 500;
+
+    &Item {
+      display: grid;
+      grid-template-columns: 25px auto;
+      gap: 4px;
+      justify-content: center;
+      text-align: center;
+    }
+  }
+}
+
+/* =============== Breakpoints =============== */
+
+@include media-breakpoint-up(lg) {
+  .navbar {
+    &Dropdown {
+      &Item {
+        justify-content: start;
+      }
+    }
+  }
+}
