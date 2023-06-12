@@ -1,0 +1,83 @@
+{
+  "mainNavbar": {
+    "menu": {
+      "home": "Home",
+      "about": "About",
+      "services": "Services",
+      "contact": "Contact"
+    }
+  },
+  "home": {
+    "banner": {
+      "body": [
+        "An Eco-Friendly company that provides travel and cultural contents, and develop an online and offline streaming service converged with the 4th industry and metaverse service."
+      ]
+    },
+    "services": {
+      "title": ["Our", "Product", "Services"],
+      "control": {
+        "ev": "Electric Vehicle",
+        "viajePoint": "Viaje Point",
+        "metaverse": "Metaverse"
+      },
+      "content": {
+        "ev": {
+          "title": "Electric Vehicle",
+          "body": [
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex doloribus cum quod similique voluptates ea quos ipsa consequuntur ipsam labore?",
+            "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam, quis!"
+          ],
+          "pageUrl": "/services/ev",
+          "buttonText": "Learn More"
+        },
+        "viajePoint": {
+          "title": "Viaje Point",
+          "body": [
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex doloribus cum quod similique voluptates ea quos ipsa consequuntur ipsam labore?",
+            "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam, quis!",
+            "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam, quis!"
+          ],
+          "pageUrl": "/services/viaje-point",
+          "buttonText": "Learn More"
+        },
+        "metaverse": {
+          "title": "Metaverse",
+          "body": [
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex doloribus cum quod similique voluptates ea quos ipsa consequuntur ipsam labore?",
+            "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam, quis!"
+          ],
+          "pageUrl": "/services/metaverse",
+          "buttonText": "Learn More"
+        }
+      }
+    },
+    "about": {
+      "title": "About Us",
+      "body": [
+        "Carbon-Free VIAJE is an Eco-Friendly ESG investment and management company that provides travel and cultural contents and handling a metaverse service fused with the 4th industry by developing an online streaming service with both online and offline audiences."
+      ]
+    },
+    "partners": {
+      "title": "Partners",
+      "body": [
+        "Carbon-Free VIAJE collaborated with various local companies in Bali and as well as Korean companies to expand the business globally and provide the best service to the people in the VIAJE's Eco-system."
+      ]
+    }
+  },
+  "footer": {
+    "introduction": [
+      "The ESG strategy is for future global eco-friendly preservation and at the same time. It has become an essential factor as it affects future business and investment. Carbon-Free VIAJE carries out global eco-friendly business by connecting companies and eco-friendliness by introducing the ESG strategy."
+    ],
+    "navigation": {
+      "about": "About",
+      "services": "Services"
+    },
+    "contact": {
+      "title": "Let us know",
+      "placeholder": "Write an email"
+    },
+    "download": {
+      "title": "Download Viaje App"
+    }
+  }
+}

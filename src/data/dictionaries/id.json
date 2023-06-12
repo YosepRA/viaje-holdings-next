@@ -1,0 +1,83 @@
+{
+  "mainNavbar": {
+    "menu": {
+      "home": "Beranda",
+      "about": "Tentang",
+      "services": "Layanan",
+      "contact": "Kontak"
+    }
+  },
+  "home": {
+    "banner": {
+      "body": [
+        "[ID] An Eco-Friendly company that provides travel and cultural contents, and develop an online and offline streaming service converged with the 4th industry and metaverse service."
+      ]
+    },
+    "services": {
+      "title": ["Produk", "dan Layanan", "Kami"],
+      "control": {
+        "ev": "Kendaraan Elektrik",
+        "viajePoint": "Viaje Point",
+        "metaverse": "Metaverse"
+      },
+      "content": {
+        "ev": {
+          "title": "Kendaraan Elektrik",
+          "body": [
+            "[ID] Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex doloribus cum quod similique voluptates ea quos ipsa consequuntur ipsam labore?",
+            "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam, quis!"
+          ],
+          "pageUrl": "/services/ev",
+          "buttonText": "Pelajari"
+        },
+        "viajePoint": {
+          "title": "Viaje Point",
+          "body": [
+            "[ID] Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex doloribus cum quod similique voluptates ea quos ipsa consequuntur ipsam labore?",
+            "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam, quis!",
+            "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam, quis!"
+          ],
+          "pageUrl": "/services/viaje-point",
+          "buttonText": "Pelajari"
+        },
+        "metaverse": {
+          "title": "Metaverse",
+          "body": [
+            "[ID] Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex doloribus cum quod similique voluptates ea quos ipsa consequuntur ipsam labore?",
+            "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam, quis!"
+          ],
+          "pageUrl": "/services/metaverse",
+          "buttonText": "Pelajari"
+        }
+      }
+    },
+    "about": {
+      "title": "Tentang Kami",
+      "body": [
+        "[ID] Carbon-Free VIAJE is an Eco-Friendly ESG investment and management company that provides travel and cultural contents and handling a metaverse service fused with the 4th industry by developing an online streaming service with both online and offline audiences."
+      ]
+    },
+    "partners": {
+      "title": "Mitra Kerja",
+      "body": [
+        "[ID] Carbon-Free VIAJE collaborated with various local companies in Bali and as well as Korean companies to expand the business globally and provide the best service to the people in the VIAJE's Eco-system."
+      ]
+    }
+  },
+  "footer": {
+    "introduction": [
+      "[ID] The ESG strategy is for future global eco-friendly preservation and at the same time. It has become an essential factor as it affects future business and investment. Carbon-Free VIAJE carries out global eco-friendly business by connecting companies and eco-friendliness by introducing the ESG strategy."
+    ],
+    "navigation": {
+      "about": "Tentang",
+      "services": "Layanan"
+    },
+    "contact": {
+      "title": "Hubungi Kami",
+      "placeholder": "Tulis email"
+    },
+    "download": {
+      "title": "Unduh Viaje App"
+    }
+  }
+}

@@ -2,63 +2,26 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import { useParams } from 'next/navigation';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import cn from 'classnames';
 
+import type { ServicesContent, ServicesContentItem } from 'types/dictionary';
+import type { ServicesProps } from 'types/home';
+
 import styles from 'styles/home.module.scss';
 
-interface fakeServiceDataType {
-  electricVehicle: {
-    title: string;
-    body: string[];
-    pageUrl: string;
-  };
-  viajePoint: {
-    title: string;
-    body: string[];
-    pageUrl: string;
-  };
-  metaverse: {
-    title: string;
-    body: string[];
-    pageUrl: string;
-  };
-}
-
-const fakeServiceData = {
-  electricVehicle: {
-    title: 'Electric Vehicle',
-    body: [
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex doloribus cum quod similique voluptates ea quos ipsa consequuntur ipsam labore?',
-      'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam, quis!',
-    ],
-    pageUrl: '/services',
+const Services = function ServicesComponent({
+  dict: {
+    home: { services },
   },
-  viajePoint: {
-    title: 'Viaje Point',
-    body: [
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex doloribus cum quod similique voluptates ea quos ipsa consequuntur ipsam labore?',
-      'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam, quis!',
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. A minus maxime tenetur pariatur tempora corrupti cupiditate quia repellat dolor esse, molestias nostrum quas cum mollitia temporibus accusamus, sint eligendi perferendis.',
-    ],
-    pageUrl: '/services',
-  },
-  metaverse: {
-    title: 'Metaverse',
-    body: [
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex doloribus cum quod similique voluptates ea quos ipsa consequuntur ipsam labore?',
-      'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam, quis!',
-    ],
-    pageUrl: '/services',
-  },
-};
-
-const Services = function ServicesComponent() {
-  const [activeService, setActiveService] = useState('electricVehicle');
-  const { title, body, pageUrl } =
-    fakeServiceData[activeService as keyof fakeServiceDataType];
+}: ServicesProps) {
+  const [activeService, setActiveService] = useState('ev');
+  const { lang } = useParams();
+  const { title, body, pageUrl, buttonText } =
+    services.content[activeService as keyof ServicesContent];
 
   return (
     <section className={styles.services}>
@@ -66,11 +29,12 @@ const Services = function ServicesComponent() {
         <Row className={cn(styles.servicesRow)}>
           <Col xs={12} md={3}>
             <h2 className={styles.servicesTitle}>
-              Our
-              <br />
-              Product
-              <br />
-              Services
+              {/* {home?.services?.title.map((text: string) => (
+                <span>
+                  {text} <br />
+                </span>
+              ))} */}
+              {services?.title.join(' ')}
             </h2>
           </Col>
 
@@ -80,11 +44,11 @@ const Services = function ServicesComponent() {
                 <button
                   className={cn(styles.servicesControlButton, {
                     [styles.servicesControlButtonActive]:
-                      activeService === 'electricVehicle',
+                      activeService === 'ev',
                   })}
-                  onClick={() => setActiveService('electricVehicle')}
+                  onClick={() => setActiveService('ev')}
                 >
-                  Electric Vehicle
+                  {services.control.ev}
                 </button>
                 <button
                   className={cn(styles.servicesControlButton, {
@@ -93,7 +57,7 @@ const Services = function ServicesComponent() {
                   })}
                   onClick={() => setActiveService('viajePoint')}
                 >
-                  Viaje Point
+                  {services.control.viajePoint}
                 </button>
                 <button
                   className={cn(styles.servicesControlButton, {
@@ -102,7 +66,7 @@ const Services = function ServicesComponent() {
                   })}
                   onClick={() => setActiveService('metaverse')}
                 >
-                  Metaverse
+                  {services.control.metaverse}
                 </button>
               </div>
 
@@ -113,13 +77,16 @@ const Services = function ServicesComponent() {
                       <h3>{title}</h3>
 
                       <div className={styles.servicesInfoBody}>
-                        {body.map((content) => (
+                        {body.map((content: string) => (
                           <p>{content}</p>
                         ))}
                       </div>
 
-                      <Link href={pageUrl} className={styles.servicesLearnMore}>
-                        Learn More
+                      <Link
+                        href={`/${lang}/${pageUrl}`}
+                        className={styles.servicesLearnMore}
+                      >
+                        {buttonText}
                       </Link>
                     </div>
                   </Col>

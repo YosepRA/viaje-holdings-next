@@ -13,9 +13,15 @@ import {
   faYoutube,
 } from '@fortawesome/free-brands-svg-icons';
 
+import type { BannerProps } from 'types/home';
+
 import styles from 'styles/home.module.scss';
 
-const Banner = function BannerComponent() {
+const Banner = function BannerComponent({
+  dict: {
+    home: { banner },
+  },
+}: BannerProps) {
   return (
     <section className={styles.banner}>
       <Container className={styles.bannerContainer}>
@@ -27,12 +33,7 @@ const Banner = function BannerComponent() {
                 <span className={styles.bannerTitleBottom}>VIAJE</span>
               </h1>
 
-              <p className={styles.bannerExcerpt}>
-                An Eco-Friendly company that provides travel and cultural
-                contents, and develop an online and offline streaming service
-                converged with the 4<sup>th</sup> industry and metaverse
-                service.
-              </p>
+              <p className={styles.bannerExcerpt}>{banner.body}</p>
 
               <div className={styles.bannerSocialMedia}>
                 <a

@@ -172,10 +172,14 @@ $section-padding-xl: 100px 0;
     padding: $section-padding-md;
 
     &Row {
+      position: relative;
       align-items: center;
     }
 
     &Title {
+      position: absolute;
+      top: 52px;
+      max-width: 160px;
       margin-bottom: 0;
     }
 
@@ -229,6 +233,10 @@ $section-padding-xl: 100px 0;
   }
 
   .services {
+    &Title {
+      max-width: 210px;
+    }
+
     &Control {
       grid-template-columns: repeat(3, 25%);
     }
@@ -253,13 +261,10 @@ $section-padding-xl: 100px 0;
   .services {
     padding: $section-padding-xl;
 
-    &Row {
-      position: relative;
-    }
-
     &Title {
       position: absolute;
       top: 82px;
+      max-width: 240px;
       font-size: 48px;
     }
 
@@ -300,6 +305,10 @@ $section-padding-xl: 100px 0;
 
   .partners {
     padding: $section-padding-xl;
+
+    &Title {
+      font-size: 48px;
+    }
 
     &Body {
       margin-bottom: 48px;
