@@ -29,7 +29,7 @@ const About = function AboutComponent({
               <p className={styles.aboutBody}>{about.body}</p>
 
               <Link href={`/${lang}/about`} className={styles.aboutLearnMore}>
-                Learn More
+                {about.buttonText}
               </Link>
             </div>
           </Col>

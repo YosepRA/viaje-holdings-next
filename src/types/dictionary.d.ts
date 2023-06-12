@@ -22,8 +22,8 @@ interface Menu {
 export interface Home {
   banner: Banner;
   services: Services;
-  about: ServicesContentItem;
-  partners: ServicesContentItem;
+  about: About;
+  partners: Partners;
 }
 
 interface ServicesContentItem {
@@ -53,6 +53,17 @@ interface Control {
   ev: string;
   viajePoint: string;
   metaverse: string;
+}
+
+interface About {
+  title: string;
+  body: string[];
+  buttonText: string;
+}
+
+interface Partners {
+  title: string;
+  body: string[];
 }
 
 /* ======================= Footer ======================= */
