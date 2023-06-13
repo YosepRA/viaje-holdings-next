@@ -25,8 +25,8 @@ export function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
-    // Skip all internal paths (_next)
-    '/((?!_next).*)',
+    // Run middleware on every route except these ones.
+    '/((?!_next|img|file|favicon.ico).*)',
     // Optional: only run on root (/) URL
     // '/'
   ],
